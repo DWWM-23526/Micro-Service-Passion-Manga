@@ -26,7 +26,7 @@ git clone https://github.com/DWWM-23526/Micro-Service-Passion-Manga.git
 ```
 
 ```
-* cd Micro-Service-Passion-Manga
+cd Micro-Service-Passion-Manga
 ```
 ### Étape 2: Installer les dépendances
 
