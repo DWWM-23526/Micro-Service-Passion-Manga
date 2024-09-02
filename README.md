@@ -21,9 +21,13 @@ Supprimer une image : Supprimer une image du serveur et de la base de données.
 
 ### Étape 1: Cloner le dépôt
 
+```
 git clone https://github.com/DWWM-23526/Micro-Service-Passion-Manga.git
-cd Micro-Service-Passion-Manga
+```
 
+```
+* cd Micro-Service-Passion-Manga
+```
 ### Étape 2: Installer les dépendances
 
 Assurez-vous d'avoir Node d'installé, puis exécutez la commande suivante pour installer les dépendances du projet :
@@ -42,8 +46,8 @@ MONGO_URI=<votre_uri_mongodb_atlas>
 
 nodemon server
 
-### Utilisation
-# Endpoints
+# Utilisation
+### Endpoints
 
 * POST /api/images : Crée une nouvelle image. Utilisez un formulaire multipart/form-data pour envoyer l'image avec le champ image et le titre avec le champ title.
 
