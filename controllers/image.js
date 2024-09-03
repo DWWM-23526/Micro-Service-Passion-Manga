@@ -1,4 +1,3 @@
-const { title } = require("process");
 const Image = require("../models/Image");
 const fs = require("fs");
 
