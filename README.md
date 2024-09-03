@@ -39,13 +39,13 @@ npm install
 ### Étape 3: Configurer les variables d'environnement
 
 Créez un fichier .env à la racine du projet et ajoutez votre URI MongoDB Atlas :
-
+```
 MONGO_URI=<votre_uri_mongodb_atlas>
-
+```
 ### Étape 4: Démarrez le serveur
-
+```
 nodemon server
-
+```
 # Utilisation
 ### Endpoints
 
