@@ -10,8 +10,8 @@ const fetchUsersFromApi = async () => {
 
     return response.data;
   } catch (error) {
-    console.error("Erreur lors de la récupération des utilisateurs:", error);
-    return [];
+    console.error("Erreur lors de la récupération des utilisateurs");
+    return { data: [] };
   }
 };
 
