@@ -4,9 +4,7 @@ const fs = require("fs");
 exports.createImage = (req, res, next) => {
   const image = new Image({
     title: req.body.title,
-    imageUrl: `${req.protocol}://${req.get("host")}/images/${
-      req.file.filename
-    }`,
+    imageUrl: `${req.protocol}://${req.get("host")}/images/${req.file.filename}`,
   });
   image
     .save()
@@ -29,9 +27,7 @@ exports.getOneImage = (req, res, next) => {
 exports.updateImage = (req, res, next) => {
   const image = {
     title: req.body.title,
-    imageUrl: req.file
-      ? `${req.protocol}://${req.get("host")}/images/${req.file.filename}`
-      : req.body.imageUrl,
+    imageUrl: req.file ? `${req.protocol}://${req.get("host")}/images/${req.file.filename}` : req.body.imageUrl,
   };
   Image.updateOne({ _id: req.params.id }, { ...image, _id: req.params.id })
     .then(() => res.status(200).json({ message: "Image modifiée !" }))
