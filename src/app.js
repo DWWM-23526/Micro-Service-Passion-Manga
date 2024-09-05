@@ -41,7 +41,7 @@ app.get("/test-fetch-users", async (req, res) => {
   }
 });
 
-app.use("/images", express.static(path.join(__dirname, "images")));
+app.use("/images", express.static(path.join(__dirname, "../images")));
 app.use("/api/images", imageRoutes);
 
 module.exports = app;

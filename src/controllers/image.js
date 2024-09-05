@@ -2,13 +2,20 @@ const Image = require("../models/Image");
 const fs = require("fs");
 
 exports.createImage = (req, res, next) => {
+
+  if (!req.file) {
+    return res.status(400).json({ error: "Aucun fichier téléchargé" });
+  }
+
   const image = new Image({
     title: req.body.title,
     imageUrl: `${req.protocol}://${req.get("host")}/images/${req.file.filename}`,
   });
+
+
   image
     .save()
-    .then(() => res.status(201).json({ message: "Image enregistrée !" }))
+    .then(() => res.status(201).json({ status: 200, message: "success", data: [ {url: image.imageUrl} ] }))
     .catch((error) => res.status(400).json({ error }));
 };
 
