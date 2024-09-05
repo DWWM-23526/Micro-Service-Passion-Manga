@@ -4,7 +4,7 @@ const multer = require("../middleware/multer-config");
 const imageController = require("../controllers/image");
 const auth = require('../middleware/auth')
 
-router.post("/", multer, auth, imageController.createImage);
+router.post("/", multer, imageController.createImage);
 
 router.get("/" , imageController.getAllImages);
 
