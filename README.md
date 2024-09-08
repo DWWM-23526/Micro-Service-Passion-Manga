@@ -1,25 +1,27 @@
 # Micro-Service-Passion-Manga
-Ce projet est un microservice en Node.js, utilisant Express, destiné à gérer les opérations CRUD (Création, Lecture, Mise à jour, Suppression) pour des images. Ces images seront utilisées pour le projet Passion Manga. Le microservice utilise MongoDB Atlas pour la gestion des données et Multer pour l'upload des images.
 
-### Fonctionnalités
+This project is a microservice in Node.js, using Express, designed to handle CRUD operations (Create, Read, Update, Delete) for images. These images will be used for the Passion Manga project. The microservice uses MongoDB Atlas for data management and Multer for image uploads.
 
-* Créer une image : Télécharger et stocker une image sur le serveur, avec ses métadonnées dans MongoDB.
+### Features
 
-* Lire toutes les images : Récupérer la liste de toutes les images stockées.
+- Create an image: Upload and store an image on the server, with its metadata saved in MongoDB.
 
-* Lire une image spécifique : Récupérer les informations d'une image spécifique à partir de son ID.
+- Read all images: Retrieve a list of all stored images.
 
-* Mettre à jour une image : Modifier les informations d'une image existante.
-Supprimer une image : Supprimer une image du serveur et de la base de données.
+- Read a specific image: Retrieve the information of a specific image by its ID.
 
-### Prérequis
+- Update an image: Modify the information of an existing image.
 
-* Node.JS (v14 ou supérieur)
-* MongoDB Atlas (ou une autre instance MongoDB)
+- Delete an image: Remove an image from the server and the database.
+
+### Prerequisites
+
+- Node.JS (v14 or higher)
+- MongoDB Atlas (or another MongoDB instance)
 
 ### Installation
 
-### Étape 1: Cloner le dépôt
+### Step 1: Clone the repository
 
 ```
 git clone https://github.com/DWWM-23526/Micro-Service-Passion-Manga.git
@@ -28,37 +30,43 @@ git clone https://github.com/DWWM-23526/Micro-Service-Passion-Manga.git
 ```
 cd Micro-Service-Passion-Manga
 ```
-### Étape 2: Installer les dépendances
 
-Assurez-vous d'avoir Node d'installé, puis exécutez la commande suivante pour installer les dépendances du projet :
+### Step 2: Install dependencies
+
+Make sure Node is installed, then run the following command to install project dependencies:
 
 ```
 npm install
 ```
 
-### Étape 3: Configurer les variables d'environnement
+### Step 3: Configure environment variables
 
-Créez un fichier .env à la racine du projet et ajoutez votre URI MongoDB Atlas :
+Create a .env file at the root of the project and add your MongoDB Atlas URI:
+
 ```
 MONGO_URI=<votre_uri_mongodb_atlas>
 ```
-### Étape 4: Démarrez le serveur
+
+### Step 4: Start the server
+
 ```
 nodemon server
 ```
-# Utilisation
+
+# Usage
+
 ### Endpoints
 
-* POST /api/images : Crée une nouvelle image. Utilisez un formulaire multipart/form-data pour envoyer l'image avec le champ image et le titre avec le champ title.
+- POST /api/images : Creates a new image. Use a multipart/form-data form to upload the image with the image field and the title with the title field.
 
-* GET /api/images : Récupère toutes les images.
+- GET /api/images : Retrieves all images.
 
-* GET /api/images/:id : Récupère une image spécifique par son ID.
+- GET /api/images/:id : Retrieves a specific image by its ID.
 
-* PUT /api/images/:id : Met à jour une image existante. Vous pouvez envoyer une nouvelle image et/ou mettre à jour le titre.
+- PUT /api/images/:id : Updates an existing image. You can send a new image and/or update the title.
 
-* DELETE /api/images/:id : Supprime une image spécifique par son ID.
+- DELETE /api/images/:id : Deletes a specific image by its ID.
 
 #
 
-Merci d'utiliser notre micro-service !
+Thank you for using our microservice !
