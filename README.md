@@ -41,11 +41,7 @@ npm install
 
 ### Step 3: Configure environment variables
 
-Create a .env file at the root of the project and add your MongoDB Atlas URI:
-
-```
-MONGO_URI=<votre_uri_mongodb_atlas>
-```
+Remove '.exe' of .env.exe file at the root of the project and add your own data into this file:
 
 ### Step 4: Start the server
 
